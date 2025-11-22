@@ -1,53 +1,92 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Animal Personality Quiz</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js"></script>
-    </head>
-    <body>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Animal Personality Test</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
     <header>
-        <h1>Animal Personality Quiz</h1>
+        <img class="title-card" src="img/Logo.png" alt="Personality Animal Title">
+        <h1>LOGB Animal Personality Test</h1>
     </header>
 
-    <section id="legend">
-        <h2>Personality Types</h2>
-        <ul>
-            <li><strong>Lion</strong></li>
-            <li><strong>Otter</strong></li>
-            <li><strong>Beaver</strong></li>
-            <li><strong>Golden Retriever</strong></li>
-        </ul>
+    <section id="hero" class="card" aria-label="Hero">
+        <div class="hero-grid">
+            <div class="hero-left">
+                <h1>LOGB Animal Personality Test</h1>
+                <p class="muted">Discover your personality style and how you naturally interact with others. This quick quiz highlights your strengths and areas to grow.</p>
+                <div style="margin-top:18px">
+                    <br>
+                    <button id="start-quiz" class="btn">Start the Quiz</button>
+                </div>
+            </div>
+            <div class="hero-right">
+                <img src="img/Personality-Animal-Title-Card.jpg" alt="Hero image" class="hero-image">
+            </div>
+        </div>
     </section>
-    <hr>
 
-    <main id="quiz-container">
+    <section id="legend" class="card">
+        <section id="personality-images">
+            <h2>Personality Types</h2>
+            <div class="animal-grid">
+                <div class="animal-card">
+                    <img src="img/Personality-Animal-answer-Lion_3.jpg" alt="Lion">
+                    <p><strong>Lion</strong></p>
+                </div>
+                <div class="animal-card">
+                    <img src="img/Personality-Animal-answer-Beaver_2.jpg" alt="Beaver">
+                    <p><strong>Beaver</strong></p>
+                </div>
+                <div class="animal-card">
+                    <img src="img/Personality-Animal-answer-otter_2.jpg" alt="Otter">
+                    <p><strong>Otter</strong></p>
+                </div>
+                <div class="animal-card">
+                    <img src="img/Personality-Animal-answer-Golden_2.jpg" alt="Golden Retriever">
+                    <p><strong>Golden Retriever</strong></p>
+                </div>
+            </div>
+        </section>
+    </section>
 
+    <main id="quiz-container" class="card">
         <div id="progress">
-            <p><strong>Question 1 of X</strong></p>
+            <div class="progress-wrapper" aria-hidden="true">
+                <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+            </div>
+            <div class="progress-text" id="progress-text">Question 1 of X</div>
         </div>
+
         <div id="question-box">
-            <p><strong>[Question text will appear here]</strong></p>
+            <p id="question-text"><strong>[Question text will appear here]</strong></p>
         </div>
-        <br>
+
         <div id="answer-options">
-            <button>Option A (Lion)</button><br><br>
-            <button>Option B (Otter)</button><br><br>
-            <button>Option C (Beaver)</button><br><br>
-            <button>Option D (Golden Retriever)</button><br><br>
+            <button class="answer-btn" data-choice="A"><strong>Option A</strong></button>
+            <button class="answer-btn" data-choice="B"><strong>Option B</strong></button>
+            <button class="answer-btn" data-choice="C"><strong>Option C</strong></button>
+            <button class="answer-btn" data-choice="D"><strong>Option D</strong></button>
         </div>
 
+        <div class="controls">
+            <button id="back-btn" class="btn secondary" disabled aria-disabled="true">← Back</button>
+            <button id="next-btn" class="btn">Next</button>
+        </div>
     </main>
-    <br>
-    <hr>
 
-    <section id="result-section">
+    <section id="result-section" class="card">
         <h2>Your Result</h2>
-        <p><strong>[Animal result will appear here]</strong></p>
-        <button>Retake Quiz</button>
+        <p id="result-text"><strong>[Animal result will appear here]</strong></p>
+        <div style="display:flex; gap:8px; justify-content:flex-end">
+            <button id="retake-btn" class="btn secondary">Retake Quiz</button>
+            <button id="backhome-btn" class="btn">Back to Home</button>
+        </div>
     </section>
 
+    <script src="script.js"></script>
 </body>
 </html>
