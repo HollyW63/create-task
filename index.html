@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <img class="title-card" src="img/Logo.png" alt="Personality Animal Title">
+        <img class="title-card" src="img/Logo.png" alt="Personality Animal Logo">
         <h1>LOGB Animal Personality Test</h1>
     </header>
 
@@ -18,15 +18,17 @@
             <div class="hero-left">
                 <h1>LOGB Animal Personality Test</h1>
                 <p class="muted">Discover your personality style and how you naturally interact with others. This quick quiz highlights your strengths and areas to grow.</p>
-                <div style="margin-top:18px">
-                    <br>
-                    <button id="start-quiz" class="btn">Start the Quiz</button>
+                <div style="margin-top:27px">
+                    <button id="start-quiz" class="arrow-btn" aria-label="Take the test">
+                        <span>Take the test</span>
+                        <div class="arrow-wrapper" aria-hidden="true">
+                            <div class="arrow"></div>
+                        </div>
+                    </button>
                 </div>
             </div>
-            <div class="hero-right">
                 <img src="img/Personality-Animal-Title-Card.jpg" alt="Hero image" class="hero-image">
             </div>
-        </div>
     </section>
 
     <section id="legend" class="card">
@@ -35,19 +37,31 @@
             <div class="animal-grid">
                 <div class="animal-card">
                     <img src="img/Personality-Animal-answer-Lion_3.jpg" alt="Lion">
-                    <p><strong>Lion</strong></p>
+                    <div class="animal-card__content">
+                        <p class="animal-card__title">Lion</p>
+                        <p class="animal-card__description">Bold, confident leader. Natural-born organizer who takes charge and inspires others.</p>
+                    </div>
                 </div>
                 <div class="animal-card">
                     <img src="img/Personality-Animal-answer-Beaver_2.jpg" alt="Beaver">
-                    <p><strong>Beaver</strong></p>
+                    <div class="animal-card__content">
+                        <p class="animal-card__title">Beaver</p>
+                        <p class="animal-card__description">Detail-oriented and methodical. Thrives on structure, planning, and careful execution.</p>
+                    </div>
                 </div>
                 <div class="animal-card">
                     <img src="img/Personality-Animal-answer-otter_2.jpg" alt="Otter">
-                    <p><strong>Otter</strong></p>
+                    <div class="animal-card__content">
+                        <p class="animal-card__title">Otter</p>
+                        <p class="animal-card__description">Energetic and outgoing. Brings enthusiasm, creativity, and joy to every situation.</p>
+                    </div>
                 </div>
                 <div class="animal-card">
                     <img src="img/Personality-Animal-answer-Golden_2.jpg" alt="Golden Retriever">
-                    <p><strong>Golden Retriever</strong></p>
+                    <div class="animal-card__content">
+                        <p class="animal-card__title">Golden Retriever</p>
+                        <p class="animal-card__description">Loyal and compassionate. Values harmony and genuinely cares about others' wellbeing.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -71,9 +85,9 @@
             <button class="answer-btn" data-choice="C"><strong>Option C</strong></button>
             <button class="answer-btn" data-choice="D"><strong>Option D</strong></button>
         </div>
-
+        <br>
         <div class="controls">
-            <button id="back-btn" class="btn secondary" disabled aria-disabled="true">← Back</button>
+            <button id="back-btn" class="btn secondary" disabled aria-disabled="true">Back</button>
             <button id="next-btn" class="btn">Next</button>
         </div>
     </main>
